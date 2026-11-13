@@ -7,7 +7,7 @@ from html import unescape
 DATA = "data.json"
 DAILY_TARGET = 15
 WINDOW_DAYS = 21
-MIN_POINTS = 5
+MIN_POINTS = 15
 MAX_CHECK = 45
 UA = {"User-Agent": "Mozilla/5.0 (compatible; WebScout/3.0; personal trend scanner)"}
 NO_APP = "No official iOS app found - needs verification"
