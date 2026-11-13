@@ -1,46 +1,6 @@
 {
- "sites": [
-  {
-   "name": "Apricitas Economics",
-   "url": "https://apricitas.io",
-   "domain": "apricitas.io",
-   "category": "Video",
-   "source": "Hacker News search",
-   "signal": "547 points, 592 comments",
-   "found_date": "2026-11-13",
-   "ios_status": "No official iOS app found - needs verification",
-   "android_status": "No Play Store link found on website - needs verification"
-  },
-  {
-   "name": "Futurism",
-   "url": "https://futurism.com",
-   "domain": "futurism.com",
-   "category": "Other AI",
-   "source": "Hacker News search",
-   "signal": "387 points, 293 comments",
-   "found_date": "2026-11-13",
-   "ios_status": "No official iOS app found - needs verification",
-   "android_status": "No Play Store link found on website - needs verification"
-  },
-  {
-   "name": "Artificialanalysis",
-   "url": "https://artificialanalysis.ai",
-   "domain": "artificialanalysis.ai",
-   "category": "Other AI",
-   "source": "Hacker News search",
-   "signal": "379 points, 278 comments",
-   "found_date": "2026-11-13",
-   "ios_status": "No official iOS app found - needs verification",
-   "android_status": "No Play Store link found on website - needs verification"
-  }
- ],
- "history": {
-  "2026-11-13": 3
- },
- "sources": [
-  "src_hn_keywords: 60 items",
-  "src_hn_show: 97 items",
-  "src_lobsters: 24 items"
- ],
- "updated": "2026-11-13T05:08:48.659599Z"
+  "sites": [],
+  "history": {},
+  "sources": [],
+  "updated": null
 }
