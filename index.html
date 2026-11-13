@@ -89,7 +89,7 @@ const item=s=>`<div class="item"><div class="top"><div class="t"><div class="n">
  <a class="u" href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.url.replace('https://',''))}</a></div>
  <button class="btn sm" onclick="this.closest('.item').classList.toggle('on')">Verification</button>
  <a class="btn sm" href="${esc(s.url)}" target="_blank" rel="noopener" aria-label="Open ${esc(s.name)}">${ic('ext')}</a></div>
- <div class="det">iOS: ${esc(s.ios_status)}<br>Android: not checked<br>Trend: ${esc(s.source)}, ${esc(s.signal)}<br>Found: ${esc(s.found_date)}</div></div>`;
+ Android: not <div class="det">Category: ${esc(s.category||'AI tool')}<br>iOS: ${esc(s.ios_status)}<br>Android: ${esc(s.android_status||'not checked')}<br>Trend: ${esc(s.source)}, ${esc(s.signal)}<br>Found: ${esc(s.found_date)}</div></div>`;
 
 function route(){
  let r=location.hash.slice(1);if(!ROUTES[r])r='today';
