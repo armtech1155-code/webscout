@@ -1,47 +1,6 @@
 {
- "sites": [
-  {
-   "name": "HackerTV",
-   "url": "https://hackertv.org",
-   "domain": "hackertv.org",
-   "category": "Photo & Video",
-   "source": "Hacker News search",
-   "signal": "490 points, 83 comments",
-   "found_date": "2026-11-13",
-   "ios_status": "No official iOS app found - needs verification",
-   "android_status": "No Play Store link found on website - needs verification"
-  },
-  {
-   "name": "S&P 500 Board Interlocks",
-   "url": "https://bigwhalehunting.com",
-   "domain": "bigwhalehunting.com",
-   "category": "Finance",
-   "source": "Hacker News (Show HN)",
-   "signal": "178 points, 49 comments",
-   "found_date": "2026-11-13",
-   "ios_status": "No official iOS app found - needs verification",
-   "android_status": "No Play Store link found on website - needs verification"
-  },
-  {
-   "name": "Ghana Street Games",
-   "url": "https://ghanastreetgames.com",
-   "domain": "ghanastreetgames.com",
-   "category": "Games",
-   "source": "Hacker News search",
-   "signal": "115 points, 22 comments",
-   "found_date": "2026-11-13",
-   "ios_status": "No official iOS app found - needs verification",
-   "android_status": "No Play Store link found on website - needs verification"
-  }
- ],
- "history": {
-  "2026-11-13": 3
- },
- "sources": [
-  "src_hn_keywords: 161 items",
-  "src_hn_show: 194 items",
-  "src_lobsters: 23 items",
-  "candidates after filtering: 115"
- ],
- "updated": "2026-11-13T05:15:30.536340Z"
+  "sites": [],
+  "history": {},
+  "sources": [],
+  "updated": null
 }
