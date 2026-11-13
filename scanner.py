@@ -218,7 +218,7 @@ def stage_a(c):
     if alive:
         ios_l, and_l = store_links(html)
         text = " ".join([c["title"], meta_text(html), c["domain"]])
-                if not (ios_l or and_l) and not DEV_RE.search(text) and not GAME_RE.search(text):
+        if not (ios_l or and_l) and not DEV_RE.search(text) and not GAME_RE.search(text):
             cat = classify(text)
             if cat:
                 pre = (cat, page_name(html, c["domain"]))
