@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WebScout AI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--pri:#4f46e5;--pri-d:#4338ca;--pri-l:#eef2ff;--bg:#f8fafc;--card:#fff;--ink:#0f172a;--mute:#64748b;--line:#e2e8f0;--hi:#eff6ff;--err:#dc2626}
+*{box-sizing:border-box}html,body{margin:0}
+body{font:14px/1.5 Inter,system-ui,sans-serif;background:var(--bg);color:var(--ink);overflow-x:hidden}
+svg.i{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:none}
+button{font:inherit;cursor:pointer}:focus-visible{outline:2px solid var(--pri);outline-offset:2px}
+.btn{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:8px;padding:8px 14px;font-weight:500;text-decoration:none}
+.btn:hover{background:var(--bg)}.btn.sm{padding:5px 10px;font-size:13px}.btn[disabled]{opacity:.5;cursor:default}
+input[type=search]{width:100%;border:1px solid var(--line);border-radius:8px;padding:9px 12px 9px 34px;font:inherit;background:var(--card);color:var(--ink)}
+.logo{display:flex;align-items:center;gap:10px;font-weight:600;font-size:18px;padding:0 8px 22px}
+.logo b{display:grid;place-items:center;width:32px;height:32px;border-radius:8px;background:var(--pri);color:#fff}
+#app{display:flex;min-height:100vh}
+aside{width:232px;background:var(--card);border-right:1px solid var(--line);padding:20px 14px;position:sticky;top:0;height:100vh;flex:none}
+nav a{display:flex;align-items:center;gap:10px;padding:9px 10px;border-radius:8px;color:var(--mute);text-decoration:none;font-weight:500;margin-bottom:2px}
+nav a:hover{background:var(--bg);color:var(--ink)}nav a.on{background:var(--pri-l);color:var(--pri)}
+.main{flex:1;min-width:0}
+header{display:flex;align-items:center;gap:12px;padding:14px 28px;background:var(--card);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}
+header h1{font-size:18px;font-weight:600;margin:0;flex:1}
+.s{position:relative;width:260px}.s svg{position:absolute;left:10px;top:9px;color:var(--mute)}
+.ib{border:1px solid var(--line);background:var(--card);border-radius:8px;width:36px;height:36px;display:grid;place-items:center;color:var(--ink)}
+#menu-btn{display:none}
+section.pg{padding:28px;max-width:860px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:28px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;box-shadow:0 1px 2px rgba(15,23,42,.04)}
+.stat{padding:18px 20px}.stat span{color:var(--mute)}.stat b{display:block;font-size:30px;font-weight:600}
+h2{font-size:15px;font-weight:500;margin:0 0 10px}
+.item{padding:12px 18px;border-bottom:1px solid var(--line)}.item:last-child{border:0}
+.top{display:flex;align-items:center;gap:12px}.top .t{flex:1;min-width:0}
+.n{font-weight:500}.u{color:var(--pri);text-decoration:none;font-size:13px;word-break:break-all}.u:hover{text-decoration:underline}
+.det{display:none;color:var(--mute);font-size:13px;margin-top:8px;padding-top:8px;border-top:1px dashed var(--line)}
+.item.on .det{display:block}
+.tb{display:flex;gap:10px;margin-bottom:14px}.tb .s{flex:1;max-width:360px}
+.pgn{display:flex;align-items:center;justify-content:space-between;margin-top:14px;color:var(--mute)}.pgn div{display:flex;gap:8px;align-items:center}
+.empty{padding:40px 20px;text-align:center;color:var(--mute)}.empty b{display:block;color:var(--ink);font-weight:500;margin-bottom:4px}
+.note{background:var(--hi);color:#1d4ed8;border-radius:8px;padding:8px 12px;font-size:13px;margin-bottom:16px}
+table{border-collapse:collapse;width:100%}td,th{text-align:left;padding:10px 18px;border-bottom:1px solid var(--line)}th{color:var(--mute);font-weight:500}
+.sk{height:44px;margin:12px 18px;border-radius:8px;background:linear-gradient(90deg,#eef1f5 25%,#f6f8fa 50%,#eef1f5 75%);background-size:200% 100%;animation:sk 1.2s infinite}
+@keyframes sk{to{background-position:-200% 0}}
+#toast{position:fixed;right:20px;bottom:20px;background:var(--ink);color:#fff;padding:10px 16px;border-radius:8px;display:none}
+@media(max-width:860px){
+ aside{position:fixed;left:0;top:0;z-index:20;transform:translateX(-100%);transition:transform .2s}
+ aside.open{transform:none;box-shadow:0 0 0 100vmax rgba(15,23,42,.35)}
+ #menu-btn{display:grid}header{padding:12px 16px;flex-wrap:wrap}.s{order:9;width:100%}
+ section.pg{padding:18px 16px}.cards{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style></head><body>
+<div id="app">
+ <aside id="side"><div class="logo"><b id="lg"></b>WebScout AI</div><nav id="nav"></nav></aside>
+ <div class="main">
+  <header>
+   <button class="ib" id="menu-btn" aria-label="Open menu"></button>
+   <h1 id="title">Today</h1>
+   <div class="s" id="sbox"><span id="si"></span><input id="gs" type="search" placeholder="Search websites" aria-label="Search websites"></div>
+   <button class="ib" id="bell" aria-label="Enable browser notifications" title="Enable browser notifications"></button>
+  </header>
+  <section class="pg" id="view"></section>
+ </div>
+</div>
+<div id="toast" role="status"></div>
+<script>
+const $=s=>document.querySelector(s);
+const P={
+ trend:'<polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/>',
+ globe:'<circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/>',
+ clock:'<circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>',
+ bell:'<path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/>',
+ search:'<circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>',
+ ext:'<path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>',
+ menu:'<line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/>'
+};
+const ic=n=>`<svg class="i" viewBox="0 0 24 24">${P[n]}</svg>`;
+const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+$('#lg').innerHTML=ic('globe');$('#si').innerHTML=ic('search');$('#bell').innerHTML=ic('bell');$('#menu-btn').innerHTML=ic('menu');
+const ROUTES={today:['Today','trend'],all:['All websites','globe'],history:['History','clock']};
+$('#nav').innerHTML=Object.entries(ROUTES).map(([k,[t,i]])=>`<a href="#${k}" data-r="${k}">${ic(i)}${t}</a>`).join('');
+
+let DB=null,q='',pg=1,timer;const PER=10;
+function toast(m){const t=$('#toast');t.textContent=m;t.style.display='block';setTimeout(()=>t.style.display='none',3000)}
+const sk=()=>'<div class="sk"></div>'.repeat(3);
+const empty=(t,d)=>`<div class="empty"><b>${t}</b>${d}</div>`;
+const item=s=>`<div class="item"><div class="top"><div class="t"><div class="n">${esc(s.name)}</div>
+ <a class="u" href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.url.replace('https://',''))}</a></div>
+ <button class="btn sm" onclick="this.closest('.item').classList.toggle('on')">Verification</button>
+ <a class="btn sm" href="${esc(s.url)}" target="_blank" rel="noopener" aria-label="Open ${esc(s.name)}">${ic('ext')}</a></div>
+ <div class="det">iOS: ${esc(s.ios_status)}<br>Android: not checked<br>Trend: ${esc(s.source)}, ${esc(s.signal)}<br>Found: ${esc(s.found_date)}</div></div>`;
+
+function route(){
+ let r=location.hash.slice(1);if(!ROUTES[r])r='today';
+ $('#title').textContent=ROUTES[r][0];
+ document.querySelectorAll('#nav a').forEach(a=>a.classList.toggle('on',a.dataset.r===r));
+ $('#side').classList.remove('open');$('#sbox').style.display=r==='all'?'':'none';
+ const v=$('#view');
+ if(!DB){v.innerHTML=`<div class="card">${sk()}</div>`;return}
+ if(r==='today')today(v);else if(r==='all')all(v);else hist(v);
+}
+function today(v){
+ const sites=DB.sites||[],hist=DB.history||{};
+ const d=new Date().toISOString().slice(0,10);
+ const latest=sites.length?sites[0].found_date:null;
+ const list=sites.filter(s=>s.found_date===latest);
+ let w=0;for(let i=0;i<7;i++)w+=hist[new Date(Date.now()-i*864e5).toISOString().slice(0,10)]||0;
+ v.innerHTML=`<div class="cards"><div class="card stat"><span>Today</span><b>${hist[d]||0}</b></div>
+ <div class="card stat"><span>Last 7 days</span><b>${w}</b></div><div class="card stat"><span>Total websites</span><b>${sites.length}</b></div></div>
+ ${latest&&latest!==d?`<div class="note">Aaj ka scan abhi nahi chala. Pichla scan (${esc(latest)}) dikh raha hai.</div>`:''}
+ <h2>${latest===d?"Today's trending websites":'Latest trending websites'}</h2>
+ <div class="card">${list.length?list.map(item).join(''):empty('Abhi koi website nahi','GitHub Actions mein "WebScout daily scan" run karein.')}</div>
+ <p style="color:var(--mute);font-size:13px">Last scan: ${DB.updated?new Date(DB.updated).toLocaleString():'never'}</p>`;
+}
+function all(v){
+ v.innerHTML=`<div class="card" id="box"></div><div class="pgn" id="pgn"></div>`;
+ const f=(DB.sites||[]).filter(s=>(s.name+s.domain).toLowerCase().includes(q.toLowerCase()));
+ const pages=Math.max(1,Math.ceil(f.length/PER));if(pg>pages)pg=pages;
+ $('#box').innerHTML=f.length?f.slice((pg-1)*PER,pg*PER).map(item).join(''):empty(q?'No matches':'No websites yet',q?'Try a different name or domain.':'Discoveries will appear here.');
+ $('#pgn').innerHTML=f.length?`<span>${f.length} websites</span><div><button class="btn sm" id="pv" ${pg<2?'disabled':''}>Previous</button><span>Page ${pg} of ${pages}</span><button class="btn sm" id="nx" ${pg>=pages?'disabled':''}>Next</button></div>`:'';
+ if($('#pv'))$('#pv').onclick=()=>{pg--;all(v)};if($('#nx'))$('#nx').onclick=()=>{pg++;all(v)};
+}
+function hist(v){
+ const h=DB.history||{},ks=Object.keys(h).sort().reverse();
+ v.innerHTML=`<div class="card">${ks.length?`<table><tr><th>Date</th><th>Websites found</th></tr>${ks.map(k=>`<tr><td>${esc(k)}</td><td>${h[k]}</td></tr>`).join('')}</table>`:empty('No history yet','Daily counts will appear after the first scan.')}</div>
+ <h2 style="margin-top:24px">Sources</h2><div class="card" style="padding:14px 18px;color:var(--mute)">${(DB.sources||[]).map(esc).join('<br>')||'No scan yet.'}</div>`;
+}
+$('#gs').oninput=e=>{clearTimeout(timer);const val=e.target.value;timer=setTimeout(()=>{q=val;pg=1;route()},250)};
+$('#menu-btn').onclick=()=>$('#side').classList.toggle('open');
+document.addEventListener('click',e=>{const s=$('#side');if(s.classList.contains('open')&&!s.contains(e.target)&&!$('#menu-btn').contains(e.target))s.classList.remove('open')});
+$('#bell').onclick=()=>{
+ if(!('Notification' in window)){toast('Ye browser notifications support nahi karta');return}
+ Notification.requestPermission().then(p=>toast(p==='granted'?'Notifications on hain (dashboard khula ho tab)':'Notifications blocked'));
+};
+addEventListener('hashchange',route);route();
+
+fetch('data.json?'+Date.now()).then(r=>r.json()).then(db=>{
+ DB=db;route();
+ let seen=[];try{seen=JSON.parse(localStorage.getItem('seen')||'[]')}catch(e){}
+ const fresh=(db.sites||[]).filter(s=>!seen.includes(s.domain));
+ if(fresh.length&&seen.length&&'Notification' in window&&Notification.permission==='granted')
+  new Notification('WebScout: '+fresh.length+' nayi website',{body:fresh.map(s=>s.name).join(', ')});
+ try{localStorage.setItem('seen',JSON.stringify((db.sites||[]).map(s=>s.domain)))}catch(e){}
+}).catch(()=>{$('#view').innerHTML=empty('data.json load nahi hui','Page ko GitHub Pages se ya local server (python -m http.server) se kholein.')});
+</script></body></html>
