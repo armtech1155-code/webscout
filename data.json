@@ -1,6 +1,69 @@
 {
-  "sites": [],
-  "history": {},
-  "sources": [],
-  "updated": null
+ "sites": [
+  {
+   "name": "HackerTV",
+   "url": "https://hackertv.org",
+   "domain": "hackertv.org",
+   "category": "Photo & Video",
+   "source": "Hacker News search",
+   "signal": "490 points, 83 comments",
+   "found_date": "2026-11-13",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
+   "name": "S&P 500 Board Interlocks",
+   "url": "https://bigwhalehunting.com",
+   "domain": "bigwhalehunting.com",
+   "category": "Finance",
+   "source": "Hacker News (Show HN)",
+   "signal": "178 points, 49 comments",
+   "found_date": "2026-11-13",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
+   "name": "SlideBySide",
+   "url": "https://slidebyside.com",
+   "domain": "slidebyside.com",
+   "category": "Design & 3D",
+   "source": "Hacker News (Show HN)",
+   "signal": "84 points, 36 comments",
+   "found_date": "2026-11-13",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
+   "name": "EyesRhythm",
+   "url": "https://eyesrhythm.com",
+   "domain": "eyesrhythm.com",
+   "category": "Health & Fitness",
+   "source": "Hacker News (Show HN)",
+   "signal": "40 points, 23 comments",
+   "found_date": "2026-11-13",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
+   "name": "Arsaze",
+   "url": "https://arsaze.com",
+   "domain": "arsaze.com",
+   "category": "Photo & Video",
+   "source": "Hacker News (Show HN)",
+   "signal": "60 points, 0 comments",
+   "found_date": "2026-11-13",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  }
+ ],
+ "history": {
+  "2026-11-13": 5
+ },
+ "sources": [
+  "src_hn_keywords: 72 items",
+  "src_hn_show: 133 items",
+  "src_lobsters: 23 items",
+  "candidates after filtering: 63"
+ ],
+ "updated": "2026-11-13T05:43:22.995281Z"
 }
