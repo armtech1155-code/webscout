@@ -1,6 +1,40 @@
 {
-  "sites": [],
-  "history": {},
-  "sources": [],
-  "updated": null
+ "sites": [
+  {
+   "name": "Rust-lang",
+   "url": "https://rust-lang.org",
+   "domain": "rust-lang.org",
+   "source": "Hacker News (front page)",
+   "signal": "528 points, 218 comments",
+   "found_date": "2026-11-13",
+   "ios_status": "No official iOS app found - needs verification"
+  },
+  {
+   "name": "Moddb",
+   "url": "https://moddb.com",
+   "domain": "moddb.com",
+   "source": "Hacker News (front page)",
+   "signal": "252 points, 91 comments",
+   "found_date": "2026-11-13",
+   "ios_status": "No official iOS app found - needs verification"
+  },
+  {
+   "name": "Tinyvalencia",
+   "url": "https://tinyvalencia.com",
+   "domain": "tinyvalencia.com",
+   "source": "Hacker News (Show HN)",
+   "signal": "251 points, 62 comments",
+   "found_date": "2026-11-13",
+   "ios_status": "No official iOS app found - needs verification"
+  }
+ ],
+ "history": {
+  "2026-11-13": 3
+ },
+ "sources": [
+  "src_hn_show: 16 items",
+  "src_hn_front: 22 items",
+  "src_lobsters: 23 items"
+ ],
+ "updated": "2026-11-13T04:59:23.090818Z"
 }
