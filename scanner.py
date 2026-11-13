@@ -5,27 +5,28 @@ import urllib.error, urllib.parse, urllib.request
 from html import unescape
 
 DATA = "data.json"
-DAILY_TARGET = 15
-WINDOW_DAYS = 21
-MIN_POINTS = 15
-MAX_CHECK = 45
+DAILY_TARGET = 20
+WINDOW_DAYS = 45
+MIN_POINTS = 3
+MAX_CHECK = 250
 UA = {"User-Agent": "Mozilla/5.0 (compatible; WebScout/3.0; personal trend scanner)"}
 NO_APP = "No official iOS app found - needs verification"
 NO_ANDROID = "No Play Store link found on website - needs verification"
 
 # One group of searches per app-store style category
 QUERIES = [
-    "photo editor", "video editor", "AI image generator", "text to video", "AI avatar",
-    "music app", "AI music", "voice changer", "podcast tool",
-    "note taking app", "todo app", "productivity tool", "habit tracker", "journal app", "calendar app",
-    "language learning", "flashcards", "study tool", "learning app",
-    "fitness app", "workout tracker", "meditation app", "sleep tracker",
-    "budget app", "expense tracker", "personal finance", "invoice generator",
-    "recipe app", "meal planner",
-    "travel planner", "trip planning",
-    "chat app", "social network", "community app",
-    "design tool", "3D model generator", "logo maker",
-    "pdf tool", "file converter", "qr code", "resume builder",
+    "photo app", "camera app", "video downloader", "screen recorder", "subtitle generator",
+    "AI voice", "text to speech", "audio editor", "karaoke", "radio", "playlist",
+    "AI assistant", "AI writing", "AI photo", "AI headshot", "background remover",
+    "sleep app", "diet tracker", "mental health", "running app", "yoga",
+    "savings app", "stock tracker", "crypto wallet", "receipt scanner", "bill splitter",
+    "kids learning", "typing practice", "math solver", "dictionary", "reading app",
+    "coffee", "cooking timer", "grocery list", "nutrition",
+    "flight tracker", "map app", "packing list", "city guide",
+    "dating", "group chat", "event planner", "social media scheduler",
+    "wallpaper", "icon pack", "color palette", "font", "sketch app",
+    "pomodoro", "time tracker", "kanban", "mind map", "email app", "bookmark manager",
+    "weather", "unit converter", "password manager", "translator", "barcode scanner",
 ]
 
 CATS = [
@@ -122,7 +123,7 @@ def src_hn_keywords():
 def src_hn_show():
     since = int(time.time()) - WINDOW_DAYS * 86400
     out = []
-    for page in (0, 1):
+    for page in (0, 1, 2, 3):
         hits = hn_hits({"tags": "show_hn", "hitsPerPage": 100, "page": page,
                         "numericFilters": f"points>={MIN_POINTS},created_at_i>{since}"})
         out += [to_item(h, "Hacker News (Show HN)") for h in hits if h.get("url")]
@@ -131,10 +132,16 @@ def src_hn_show():
 
 def src_lobsters():
     out = []
-    for it in json.loads(get("https://lobste.rs/hottest.json"))[:50]:
-        if it.get("url"):
-            out.append(dict(url=it["url"], title=it.get("title") or "", source="Lobsters (hottest)",
-                            score=it.get("score", 0), signal=f"{it.get('score', 0)} points"))
+    for url in ("https://lobste.rs/hottest.json", "https://lobste.rs/hottest.json?page=2",
+                "https://lobste.rs/newest.json", "https://lobste.rs/newest.json?page=2"):
+        try:
+            for it in json.loads(get(url)):
+                if it.get("url"):
+                    out.append(dict(url=it["url"], title=it.get("title") or "",
+                                    source="Lobsters", score=it.get("score", 0),
+                                    signal=f"{it.get('score', 0)} points"))
+        except Exception:
+            pass
     return out
 
 
