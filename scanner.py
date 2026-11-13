@@ -5,7 +5,7 @@ import urllib.error, urllib.parse, urllib.request
 from html import unescape
 
 DATA = "data.json"
-DAILY_TARGET = 3
+DAILY_TARGET = 15
 WINDOW_DAYS = 21
 MIN_POINTS = 5
 MAX_CHECK = 45
@@ -21,7 +21,6 @@ QUERIES = [
     "language learning", "flashcards", "study tool", "learning app",
     "fitness app", "workout tracker", "meditation app", "sleep tracker",
     "budget app", "expense tracker", "personal finance", "invoice generator",
-    "browser game", "puzzle game", "multiplayer game",
     "recipe app", "meal planner",
     "travel planner", "trip planning",
     "chat app", "social network", "community app",
@@ -30,7 +29,6 @@ QUERIES = [
 ]
 
 CATS = [
-    ("Games", r"\bgames?\b|puzzle|multiplayer|arcade|chess|trivia|wordle"),
     ("Music & Audio", r"music|song|audio|voice|podcast|sound|\bbeat"),
     ("Photo & Video", r"photo|video|image|camera|animation|\bgif\b|\bfilm"),
     ("Design & 3D", r"\b3d\b|design|logo|illustrat|avatar|sketch|draw|\bicons?\b|font|mockup"),
@@ -58,6 +56,7 @@ DEV_RE = re.compile(
     r"\b(api|sdk|library|libraries|framework|open[- ]source|cli|compiler|database|kubernetes|devops|"
     r"linux|rust|python|javascript|typescript|npm|programming|developers?|self-hosted|github|llm|"
     r"benchmark|repository|terminal|kernel|server|protocol|runtime|\bos\b)\b", re.I)
+GAME_RE = re.compile(r"\bgames?\b|gaming|gamer|puzzle|multiplayer|arcade|chess|trivia|wordle|minecraft|roguelike|esports", re.I)
 # Not a product: news / essay style post titles
 BLOG_RE = re.compile(
     r"^(how|why|what|when|who|i |we |my |the )|\?$|lessons|essay|opinion|interview|study finds|paper|"
@@ -219,7 +218,7 @@ def stage_a(c):
     if alive:
         ios_l, and_l = store_links(html)
         text = " ".join([c["title"], meta_text(html), c["domain"]])
-        if not (ios_l or and_l) and not DEV_RE.search(text):
+                if not (ios_l or and_l) and not DEV_RE.search(text) and not GAME_RE.search(text):
             cat = classify(text)
             if cat:
                 pre = (cat, page_name(html, c["domain"]))
