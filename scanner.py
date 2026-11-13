@@ -1,4 +1,4 @@
-"""WebScout scanner v2 - trending AI tool websites (image, video, 3D, music...)
+"""WebScout scanner v3 - trending app-style websites across all app categories
 whose mobile app is not found. Free public sources only. No API keys, no AI APIs."""
 import json, os, re, time, datetime
 import urllib.error, urllib.parse, urllib.request
@@ -7,16 +7,41 @@ from html import unescape
 DATA = "data.json"
 DAILY_TARGET = 3
 WINDOW_DAYS = 21
-MIN_POINTS = 8
-UA = {"User-Agent": "Mozilla/5.0 (compatible; WebScout/2.0; personal trend scanner)"}
+MIN_POINTS = 5
+MAX_CHECK = 45
+UA = {"User-Agent": "Mozilla/5.0 (compatible; WebScout/3.0; personal trend scanner)"}
 NO_APP = "No official iOS app found - needs verification"
 NO_ANDROID = "No Play Store link found on website - needs verification"
 
+# One group of searches per app-store style category
 QUERIES = [
-    "text to video", "AI video generator", "image to video", "AI animation",
-    "AI image generator", "text to image", "AI art", "AI photo editor",
-    "text to 3D", "3D model generator", "AI avatar", "AI design tool",
-    "AI music generator", "AI voice",
+    "photo editor", "video editor", "AI image generator", "text to video", "AI avatar",
+    "music app", "AI music", "voice changer", "podcast tool",
+    "note taking app", "todo app", "productivity tool", "habit tracker", "journal app", "calendar app",
+    "language learning", "flashcards", "study tool", "learning app",
+    "fitness app", "workout tracker", "meditation app", "sleep tracker",
+    "budget app", "expense tracker", "personal finance", "invoice generator",
+    "browser game", "puzzle game", "multiplayer game",
+    "recipe app", "meal planner",
+    "travel planner", "trip planning",
+    "chat app", "social network", "community app",
+    "design tool", "3D model generator", "logo maker",
+    "pdf tool", "file converter", "qr code", "resume builder",
+]
+
+CATS = [
+    ("Games", r"\bgames?\b|puzzle|multiplayer|arcade|chess|trivia|wordle"),
+    ("Music & Audio", r"music|song|audio|voice|podcast|sound|\bbeat"),
+    ("Photo & Video", r"photo|video|image|camera|animation|\bgif\b|\bfilm"),
+    ("Design & 3D", r"\b3d\b|design|logo|illustrat|avatar|sketch|draw|\bicons?\b|font|mockup"),
+    ("Health & Fitness", r"fitness|workout|health|meditat|sleep|yoga|diet|nutrition|mental|therapy|running"),
+    ("Finance", r"budget|expense|invoice|finance|money|invest|crypto|banking|\btax|payment"),
+    ("Education", r"\blearn|study|flashcard|language|course|tutor|quiz|education|\bmath|school"),
+    ("Food & Drink", r"recipe|meal|cooking|\bfood|restaurant|grocery|coffee"),
+    ("Travel", r"travel|\btrip|flight|hotel|itinerary|navigation"),
+    ("Social & Chat", r"social|\bchat|messag|community|dating|friends"),
+    ("Productivity", r"\bnotes?\b|todo|to-do|\btasks?\b|calendar|planner|productiv|organi[sz]|schedul|reminder|habit|journal|focus|\bpdf|document|writing|resume"),
+    ("Utilities", r"convert|calculator|scanner|qr code|utility|translate|weather|compress"),
 ]
 
 SKIP = set("""github.com gitlab.com youtube.com youtu.be twitter.com x.com medium.com reddit.com
@@ -25,16 +50,20 @@ apple.com microsoft.com amazon.com facebook.com instagram.com linkedin.com arxiv
 news.ycombinator.com producthunt.com lobste.rs wired.com bloomberg.com reuters.com
 theguardian.com techcrunch.com cnn.com forbes.com wsj.com ft.com openai.com anthropic.com
 mozilla.org apache.org python.org stackoverflow.com notion.so figma.com huggingface.co
-replicate.com kaggle.com paperswithcode.com nvidia.com meta.com x.ai deepmind.google
-stability.ai midjourney.com runwayml.com""".split())
+replicate.com kaggle.com nvidia.com meta.com deepmind.google spotify.com netflix.com
+duolingo.com canva.com tiktok.com whatsapp.com telegram.org discord.com""".split())
 
-AI_RE = re.compile(r"\bai\b|\ba\.i\.|gpt|llm|diffusion|generat|text[- ]to|image[- ]to|neural|sora|flux", re.I)
-CATS = [
-    ("3D", r"\b3d\b|mesh"),
-    ("Video", r"video|animat|motion|film|clip"),
-    ("Music/Audio", r"music|song|audio|voice|speech|tts|sound|podcast"),
-    ("Image", r"image|photo|picture|\bart\b|logo|illustrat|avatar|portrait|design|sketch|draw|icon"),
-]
+# Not an app-style product: developer tools, libraries, infrastructure
+DEV_RE = re.compile(
+    r"\b(api|sdk|library|libraries|framework|open[- ]source|cli|compiler|database|kubernetes|devops|"
+    r"linux|rust|python|javascript|typescript|npm|programming|developers?|self-hosted|github|llm|"
+    r"benchmark|repository|terminal|kernel|server|protocol|runtime|\bos\b)\b", re.I)
+# Not a product: news / essay style post titles
+BLOG_RE = re.compile(
+    r"^(how|why|what|when|who|i |we |my |the )|\?$|lessons|essay|opinion|interview|study finds|paper|"
+    r"research|announc|raises|funding|acquir|layoff|lawsuit|court|election|\bban\b|outage|breach|vulnerab",
+    re.I)
+BLOG_PATH_RE = re.compile(r"/(blog|posts?|news|articles?|p|story|stories|20\d\d)/", re.I)
 
 
 def get(url, timeout=20):
@@ -60,12 +89,13 @@ def classify(text):
     for cat, rx in CATS:
         if re.search(rx, text, re.I):
             return cat
-    return "Other AI"
+    return None
 
 
 # ---------------- Sources (free, public) ----------------
 def hn_hits(params):
-    return json.loads(get("https://hn.algolia.com/api/v1/search?" + urllib.parse.urlencode(params))).get("hits", [])
+    url = "https://hn.algolia.com/api/v1/search?" + urllib.parse.urlencode(params)
+    return json.loads(get(url)).get("hits", [])
 
 
 def to_item(h, label):
@@ -92,16 +122,19 @@ def src_hn_keywords():
 
 def src_hn_show():
     since = int(time.time()) - WINDOW_DAYS * 86400
-    hits = hn_hits({"tags": "show_hn", "hitsPerPage": 100,
-                    "numericFilters": f"points>=5,created_at_i>{since}"})
-    return [to_item(h, "Hacker News (Show HN)") for h in hits if h.get("url")]
+    out = []
+    for page in (0, 1):
+        hits = hn_hits({"tags": "show_hn", "hitsPerPage": 100, "page": page,
+                        "numericFilters": f"points>={MIN_POINTS},created_at_i>{since}"})
+        out += [to_item(h, "Hacker News (Show HN)") for h in hits if h.get("url")]
+    return out
 
 
 def src_lobsters():
     out = []
-    for it in json.loads(get("https://lobste.rs/t/ai.json"))[:40]:
+    for it in json.loads(get("https://lobste.rs/hottest.json"))[:50]:
         if it.get("url"):
-            out.append(dict(url=it["url"], title=it.get("title") or "", source="Lobsters (ai tag)",
+            out.append(dict(url=it["url"], title=it.get("title") or "", source="Lobsters (hottest)",
                             score=it.get("score", 0), signal=f"{it.get('score', 0)} points"))
     return out
 
@@ -129,6 +162,18 @@ def store_links(html):
     ios = bool(re.search(r"apps\.apple\.com|itunes\.apple\.com/[^\"' ]*app", html, re.I))
     android = bool(re.search(r"play\.google\.com/store/apps", html, re.I))
     return ios, android
+
+
+def meta_text(html):
+    parts = []
+    t = re.search(r"<title[^>]*>(.*?)</title>", html, re.I | re.S)
+    if t:
+        parts.append(t.group(1))
+    for m in re.finditer(
+            r'<meta[^>]+(?:name|property)=["\'](?:description|og:description)["\'][^>]*content=["\']([^"\']*)',
+            html, re.I):
+        parts.append(m.group(1))
+    return unescape(re.sub(r"\s+", " ", " ".join(parts)))
 
 
 def page_name(html, domain):
@@ -165,6 +210,23 @@ def ios_status(domain, name):
         return "Could not check - needs verification"
 
 
+def stage_a(c):
+    """Homepage check: alive, no store links, app-style, has a category. Cached on c."""
+    if "pre" in c:
+        return c["pre"]
+    alive, html = homepage(c["domain"])
+    pre = None
+    if alive:
+        ios_l, and_l = store_links(html)
+        text = " ".join([c["title"], meta_text(html), c["domain"]])
+        if not (ios_l or and_l) and not DEV_RE.search(text):
+            cat = classify(text)
+            if cat:
+                pre = (cat, page_name(html, c["domain"]))
+    c["pre"] = pre
+    return pre
+
+
 # ---------------- Main ----------------
 def main():
     db = json.load(open(DATA)) if os.path.exists(DATA) else {}
@@ -176,43 +238,62 @@ def main():
         print("Today's target already reached.")
         return
 
-    report, candidates = [], []
+    report, raw = [], []
     for fn in SOURCES:
         try:
             got = fn()
-            candidates += got
+            raw += got
             report.append(f"{fn.__name__}: {len(got)} items")
         except Exception as e:
             report.append(f"{fn.__name__}: FAILED ({e})")
-    candidates.sort(key=lambda c: c["score"], reverse=True)
 
+    # prefilter + one entry per domain (highest score)
     seen = {s["domain"] for s in db["sites"]}
-    found, checked = [], 0
-    for c in candidates:
-        if len(found) >= need or checked >= 40:
-            break
+    best = {}
+    for c in raw:
         d = root_domain(c["url"])
+        path = urllib.parse.urlparse(c["url"]).path
+        is_show = c["source"].startswith("Hacker News (Show")
         if not d or d in SKIP or d in seen:
             continue
-        text = c["title"] + " " + d
-        if not AI_RE.search(text):
-            continue  # not an AI tool
-        seen.add(d)
-        alive, html = homepage(d)
-        if not alive:
+        if BLOG_PATH_RE.search(path) or path.strip("/").count("/") >= 1:
             continue
-        checked += 1
-        ios_link, android_link = store_links(html)
-        if ios_link or android_link:
-            continue  # website itself links to an app
-        name = page_name(html, d)
-        status = ios_status(d, name)
-        if status != NO_APP:
+        if not is_show and BLOG_RE.search(c["title"].strip()):
             continue
-        found.append(dict(name=name, url=f"https://{d}", domain=d,
-                          category=classify(text), source=c["source"], signal=c["signal"],
-                          found_date=today, ios_status=status, android_status=NO_ANDROID))
-        time.sleep(2)
+        c["domain"] = d
+        if d not in best or c["score"] > best[d]["score"]:
+            best[d] = c
+    pool = sorted(best.values(), key=lambda c: c["score"], reverse=True)
+    report.append(f"candidates after filtering: {len(pool)}")
+
+    found, cats, checked = [], set(), 0
+    for pass_no in (1, 2):  # pass 1: one per category, pass 2: fill remaining
+        for c in pool:
+            if len(found) >= need:
+                break
+            if c.get("rejected") or c.get("taken"):
+                continue
+            if "pre" not in c:
+                if checked >= MAX_CHECK:
+                    continue
+                checked += 1
+            pre = stage_a(c)
+            if not pre:
+                c["rejected"] = True
+                continue
+            cat, name = pre
+            if pass_no == 1 and cat in cats:
+                continue
+            status = ios_status(c["domain"], name)
+            if status != NO_APP:
+                c["rejected"] = True
+                continue
+            c["taken"] = True
+            cats.add(cat)
+            found.append(dict(name=name, url=f"https://{c['domain']}", domain=c["domain"],
+                              category=cat, source=c["source"], signal=c["signal"],
+                              found_date=today, ios_status=status, android_status=NO_ANDROID))
+            time.sleep(2)
 
     db["sites"] = found + db["sites"]
     db["history"][today] = db["history"].get(today, 0) + len(found)
@@ -220,7 +301,7 @@ def main():
     db["sources"] = report
     with open(DATA, "w", encoding="utf-8") as f:
         json.dump(db, f, ensure_ascii=False, indent=1)
-    print(f"Found {len(found)} new site(s) (needed {need}), checked {checked}")
+    print(f"Found {len(found)} new site(s) (needed {need}), homepages checked {checked}")
     print("\n".join(report))
 
     topic = os.environ.get("NTFY_TOPIC")
@@ -228,7 +309,7 @@ def main():
         body = "\n".join(f"{s['name']} ({s['category']}) - {s['url']}" for s in found)
         req = urllib.request.Request(
             f"https://ntfy.sh/{topic}", data=body.encode("utf-8"),
-            headers={"Title": f"WebScout: {len(found)} new AI tool websites"})
+            headers={"Title": f"WebScout: {len(found)} new trending websites"})
         try:
             urllib.request.urlopen(req, timeout=15)
         except Exception as e:
