@@ -1,6 +1,171 @@
 {
  "sites": [
   {
+   "name": "Virtual Guitar",
+   "url": "https://guitoro.com",
+   "domain": "guitoro.com",
+   "category": "Music & Audio",
+   "source": "Hacker News search",
+   "signal": "573 points, 161 comments",
+   "found_date": "2026-11-13",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
+   "name": "Anthony Fu",
+   "url": "https://antfu.me",
+   "domain": "antfu.me",
+   "category": "Design & 3D",
+   "source": "Hacker News search",
+   "signal": "409 points, 83 comments",
+   "found_date": "2026-11-13",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
+   "name": "Bl2",
+   "url": "https://bl2.net",
+   "domain": "bl2.net",
+   "category": "Education",
+   "source": "Hacker News search",
+   "signal": "408 points, 109 comments",
+   "found_date": "2026-11-13",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
+   "name": "The Sun and The Air",
+   "url": "https://criminallyvulgar.dev",
+   "domain": "criminallyvulgar.dev",
+   "category": "Photo & Video",
+   "source": "Hacker News search",
+   "signal": "405 points, 188 comments",
+   "found_date": "2026-11-13",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
+   "name": "404 Media",
+   "url": "https://404media.co",
+   "domain": "404media.co",
+   "category": "Productivity",
+   "source": "Hacker News search",
+   "signal": "240 points, 96 comments",
+   "found_date": "2026-11-13",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
+   "name": "I Code 4 Coffee",
+   "url": "https://icode4.coffee",
+   "domain": "icode4.coffee",
+   "category": "Food & Drink",
+   "source": "Hacker News search",
+   "signal": "139 points, 15 comments",
+   "found_date": "2026-11-13",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
+   "name": "Dovepass",
+   "url": "https://dovepass.com",
+   "domain": "dovepass.com",
+   "category": "Travel",
+   "source": "Hacker News (Show HN)",
+   "signal": "33 points, 10 comments",
+   "found_date": "2026-11-13",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
+   "name": "Rouler",
+   "url": "https://rouler.io",
+   "domain": "rouler.io",
+   "category": "Health & Fitness",
+   "source": "Hacker News search",
+   "signal": "28 points, 9 comments",
+   "found_date": "2026-11-13",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
+   "name": "Bema",
+   "url": "https://getbema.app",
+   "domain": "getbema.app",
+   "category": "Social & Chat",
+   "source": "Hacker News (Show HN)",
+   "signal": "28 points, 21 comments",
+   "found_date": "2026-11-13",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
+   "name": "Kvittas",
+   "url": "https://kvittas.app",
+   "domain": "kvittas.app",
+   "category": "Finance",
+   "source": "Hacker News (Show HN)",
+   "signal": "12 points, 11 comments",
+   "found_date": "2026-11-13",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
+   "name": "stillwet",
+   "url": "https://stillwet.art",
+   "domain": "stillwet.art",
+   "category": "Photo & Video",
+   "source": "Hacker News (Show HN)",
+   "signal": "392 points, 114 comments",
+   "found_date": "2026-11-13",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
+   "name": "Blumify",
+   "url": "https://blumify.io",
+   "domain": "blumify.io",
+   "category": "Music & Audio",
+   "source": "Hacker News (Show HN)",
+   "signal": "119 points, 76 comments",
+   "found_date": "2026-11-13",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
+   "name": "XY-01 is coming soon",
+   "url": "https://xy.dev",
+   "domain": "xy.dev",
+   "category": "Music & Audio",
+   "source": "Hacker News (Show HN)",
+   "signal": "87 points, 85 comments",
+   "found_date": "2026-11-13",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
+   "name": "Péter Szentkirályi",
+   "url": "https://peterszentkiralyi.eu",
+   "domain": "peterszentkiralyi.eu",
+   "category": "Photo & Video",
+   "source": "Hacker News (Show HN)",
+   "signal": "87 points, 39 comments",
+   "found_date": "2026-11-13",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
+   "name": "Read Only Memo",
+   "url": "https://readonlymemo.com",
+   "domain": "readonlymemo.com",
+   "category": "Photo & Video",
+   "source": "Hacker News search",
+   "signal": "80 points, 19 comments",
+   "found_date": "2026-11-13",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
    "name": "HackerTV",
    "url": "https://hackertv.org",
    "domain": "hackertv.org",
@@ -57,13 +222,13 @@
   }
  ],
  "history": {
-  "2026-11-13": 5
+  "2026-11-13": 20
  },
  "sources": [
-  "src_hn_keywords: 72 items",
-  "src_hn_show: 133 items",
-  "src_lobsters: 23 items",
-  "candidates after filtering: 63"
+  "src_hn_keywords: 744 items",
+  "src_hn_show: 393 items",
+  "src_lobsters: 96 items",
+  "candidates after filtering: 362"
  ],
- "updated": "2026-11-13T05:43:22.995281Z"
+ "updated": "2026-11-13T05:50:50.831354Z"
 }
