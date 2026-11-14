@@ -1,6 +1,226 @@
 {
  "sites": [
   {
+   "name": "3 & Done",
+   "url": "https://3anddoneapp.com",
+   "domain": "3anddoneapp.com",
+   "category": "Productivity",
+   "source": "Hacker News search",
+   "signal": "61 points, 56 comments",
+   "found_date": "2026-11-14",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
+   "name": "Lathoa",
+   "url": "https://lathoa.ai",
+   "domain": "lathoa.ai",
+   "category": "Education",
+   "source": "Hacker News search",
+   "signal": "54 points, 51 comments",
+   "found_date": "2026-11-14",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
+   "name": "Sygal",
+   "url": "https://sygal.app",
+   "domain": "sygal.app",
+   "category": "Photo & Video",
+   "source": "Hacker News (Show HN)",
+   "signal": "46 points, 16 comments",
+   "found_date": "2026-11-14",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
+   "name": "NASSCAD",
+   "url": "https://nasscad.com",
+   "domain": "nasscad.com",
+   "category": "Design & 3D",
+   "source": "Hacker News (Show HN)",
+   "signal": "26 points, 25 comments",
+   "found_date": "2026-11-14",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
+   "name": "TorrentFreak",
+   "url": "https://torrentfreak.com",
+   "domain": "torrentfreak.com",
+   "category": "Music & Audio",
+   "source": "Hacker News search",
+   "signal": "21 points, 1 comments",
+   "found_date": "2026-11-14",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
+   "name": "WindyMapy",
+   "url": "https://windymapy.com",
+   "domain": "windymapy.com",
+   "category": "Travel",
+   "source": "Hacker News search",
+   "signal": "11 points, 4 comments",
+   "found_date": "2026-11-14",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
+   "name": "Curioushn",
+   "url": "https://curioushn.com",
+   "domain": "curioushn.com",
+   "category": "Health & Fitness",
+   "source": "Hacker News (Show HN)",
+   "signal": "11 points, 13 comments",
+   "found_date": "2026-11-14",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
+   "name": "MirrorMD",
+   "url": "https://mymirrormd.com",
+   "domain": "mymirrormd.com",
+   "category": "Finance",
+   "source": "Hacker News (Show HN)",
+   "signal": "10 points, 10 comments",
+   "found_date": "2026-11-14",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
+   "name": "Mimzie",
+   "url": "https://mimzie.com",
+   "domain": "mimzie.com",
+   "category": "Social & Chat",
+   "source": "Hacker News search",
+   "signal": "6 points, 0 comments",
+   "found_date": "2026-11-14",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
+   "name": "Foto Jocković",
+   "url": "https://fotojockovic.com",
+   "domain": "fotojockovic.com",
+   "category": "Photo & Video",
+   "source": "Hacker News (Show HN)",
+   "signal": "21 points, 14 comments",
+   "found_date": "2026-11-14",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
+   "name": "Thankyousteve",
+   "url": "https://thankyousteve.org",
+   "domain": "thankyousteve.org",
+   "category": "Music & Audio",
+   "source": "Hacker News (Show HN)",
+   "signal": "15 points, 33 comments",
+   "found_date": "2026-11-14",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
+   "name": "Online Piano",
+   "url": "https://urpiano.com",
+   "domain": "urpiano.com",
+   "category": "Music & Audio",
+   "source": "Hacker News (Show HN)",
+   "signal": "14 points, 1 comments",
+   "found_date": "2026-11-14",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
+   "name": "FlexChords",
+   "url": "https://flexchords.com",
+   "domain": "flexchords.com",
+   "category": "Music & Audio",
+   "source": "Hacker News (Show HN)",
+   "signal": "13 points, 4 comments",
+   "found_date": "2026-11-14",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
+   "name": "Usediorama",
+   "url": "https://usediorama.com",
+   "domain": "usediorama.com",
+   "category": "Photo & Video",
+   "source": "Hacker News (Show HN)",
+   "signal": "12 points, 22 comments",
+   "found_date": "2026-11-14",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
+   "name": "Rainbowsay",
+   "url": "https://rainbowsay.ai",
+   "domain": "rainbowsay.ai",
+   "category": "Music & Audio",
+   "source": "Hacker News (Show HN)",
+   "signal": "12 points, 4 comments",
+   "found_date": "2026-11-14",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
+   "name": "Endothermic Labs",
+   "url": "https://endothermic.ai",
+   "domain": "endothermic.ai",
+   "category": "Education",
+   "source": "Hacker News (Show HN)",
+   "signal": "12 points, 0 comments",
+   "found_date": "2026-11-14",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
+   "name": "Remene",
+   "url": "https://remene.si",
+   "domain": "remene.si",
+   "category": "Photo & Video",
+   "source": "Hacker News search",
+   "signal": "11 points, 0 comments",
+   "found_date": "2026-11-14",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
+   "name": "Home",
+   "url": "https://sparkjs.dev",
+   "domain": "sparkjs.dev",
+   "category": "Design & 3D",
+   "source": "Hacker News (Show HN)",
+   "signal": "11 points, 3 comments",
+   "found_date": "2026-11-14",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
+   "name": "Cinco Identity Generator 2.5",
+   "url": "https://celeryman.fun",
+   "domain": "celeryman.fun",
+   "category": "Photo & Video",
+   "source": "Hacker News (Show HN)",
+   "signal": "11 points, 1 comments",
+   "found_date": "2026-11-14",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
+   "name": "Nuance Labs",
+   "url": "https://nuancelabs.ai",
+   "domain": "nuancelabs.ai",
+   "category": "Photo & Video",
+   "source": "Hacker News search",
+   "signal": "9 points, 5 comments",
+   "found_date": "2026-11-14",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
    "name": "Virtual Guitar",
    "url": "https://guitoro.com",
    "domain": "guitoro.com",
@@ -222,13 +442,14 @@
   }
  ],
  "history": {
-  "2026-11-13": 20
+  "2026-11-13": 20,
+  "2026-11-14": 20
  },
  "sources": [
-  "src_hn_keywords: 744 items",
-  "src_hn_show: 393 items",
+  "src_hn_keywords: 745 items",
+  "src_hn_show: 392 items",
   "src_lobsters: 96 items",
-  "candidates after filtering: 362"
+  "candidates after filtering: 349"
  ],
- "updated": "2026-11-13T05:50:50.831354Z"
+ "updated": "2026-11-14T04:52:22.326508Z"
 }
