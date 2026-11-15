@@ -1,6 +1,226 @@
 {
  "sites": [
   {
+   "name": "literallyeveryfont",
+   "url": "https://literallyeveryfont.com",
+   "domain": "literallyeveryfont.com",
+   "category": "Design & 3D",
+   "source": "Hacker News search",
+   "signal": "22 points, 2 comments",
+   "found_date": "2026-11-15",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
+   "name": "cyberviber",
+   "url": "https://cyberviber.de",
+   "domain": "cyberviber.de",
+   "category": "Health & Fitness",
+   "source": "Hacker News (Show HN)",
+   "signal": "12 points, 2 comments",
+   "found_date": "2026-11-15",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
+   "name": "Google Maps Scraper",
+   "url": "https://gmapscrawl.com",
+   "domain": "gmapscrawl.com",
+   "category": "Social & Chat",
+   "source": "Hacker News (Show HN)",
+   "signal": "10 points, 5 comments",
+   "found_date": "2026-11-15",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
+   "name": "Worklicant",
+   "url": "https://worklicant.com",
+   "domain": "worklicant.com",
+   "category": "Productivity",
+   "source": "Hacker News search",
+   "signal": "7 points, 1 comments",
+   "found_date": "2026-11-15",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
+   "name": "Fabivo",
+   "url": "https://fabivo.app",
+   "domain": "fabivo.app",
+   "category": "Photo & Video",
+   "source": "Hacker News search",
+   "signal": "6 points, 0 comments",
+   "found_date": "2026-11-15",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
+   "name": "Gta6radio",
+   "url": "https://gta6radio.live",
+   "domain": "gta6radio.live",
+   "category": "Music & Audio",
+   "source": "Hacker News search",
+   "signal": "6 points, 0 comments",
+   "found_date": "2026-11-15",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
+   "name": "Science and Math News",
+   "url": "https://quantamagazine.org",
+   "domain": "quantamagazine.org",
+   "category": "Education",
+   "source": "Hacker News search",
+   "signal": "6 points, 0 comments",
+   "found_date": "2026-11-15",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
+   "name": "Gizmodo",
+   "url": "https://gizmodo.com",
+   "domain": "gizmodo.com",
+   "category": "Finance",
+   "source": "Hacker News search",
+   "signal": "4 points, 0 comments",
+   "found_date": "2026-11-15",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
+   "name": "Weatheristic",
+   "url": "https://weatheristic.com",
+   "domain": "weatheristic.com",
+   "category": "Utilities",
+   "source": "Hacker News search",
+   "signal": "4 points, 8 comments",
+   "found_date": "2026-11-15",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
+   "name": "Fishoid",
+   "url": "https://fishoid.net",
+   "domain": "fishoid.net",
+   "category": "Health & Fitness",
+   "source": "Hacker News search",
+   "signal": "8 points, 12 comments",
+   "found_date": "2026-11-15",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
+   "name": "Oddorbit",
+   "url": "https://oddorbit.app",
+   "domain": "oddorbit.app",
+   "category": "Design & 3D",
+   "source": "Hacker News search",
+   "signal": "7 points, 5 comments",
+   "found_date": "2026-11-15",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
+   "name": "Cliqqe",
+   "url": "https://cliqqe.com",
+   "domain": "cliqqe.com",
+   "category": "Photo & Video",
+   "source": "Hacker News search",
+   "signal": "5 points, 3 comments",
+   "found_date": "2026-11-15",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
+   "name": "Postraid",
+   "url": "https://postraid.com",
+   "domain": "postraid.com",
+   "category": "Photo & Video",
+   "source": "Hacker News search",
+   "signal": "5 points, 5 comments",
+   "found_date": "2026-11-15",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
+   "name": "Ohmytt",
+   "url": "https://ohmytt.com",
+   "domain": "ohmytt.com",
+   "category": "Photo & Video",
+   "source": "Hacker News search",
+   "signal": "4 points, 3 comments",
+   "found_date": "2026-11-15",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
+   "name": "Canarics",
+   "url": "https://canarics.com",
+   "domain": "canarics.com",
+   "category": "Music & Audio",
+   "source": "Hacker News search",
+   "signal": "4 points, 0 comments",
+   "found_date": "2026-11-15",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
+   "name": "Kantamigo",
+   "url": "https://kantamigo.com",
+   "domain": "kantamigo.com",
+   "category": "Music & Audio",
+   "source": "Hacker News search",
+   "signal": "4 points, 0 comments",
+   "found_date": "2026-11-15",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
+   "name": "Trytofu",
+   "url": "https://trytofu.ai",
+   "domain": "trytofu.ai",
+   "category": "Social & Chat",
+   "source": "Hacker News search",
+   "signal": "4 points, 17 comments",
+   "found_date": "2026-11-15",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
+   "name": "JashTechno",
+   "url": "https://jashtechno.com",
+   "domain": "jashtechno.com",
+   "category": "Music & Audio",
+   "source": "Hacker News search",
+   "signal": "4 points, 1 comments",
+   "found_date": "2026-11-15",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
+   "name": "Formstep",
+   "url": "https://formstep.io",
+   "domain": "formstep.io",
+   "category": "Education",
+   "source": "Hacker News search",
+   "signal": "4 points, 2 comments",
+   "found_date": "2026-11-15",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
+   "name": "Lamoom",
+   "url": "https://lamoom.com",
+   "domain": "lamoom.com",
+   "category": "Social & Chat",
+   "source": "Hacker News search",
+   "signal": "4 points, 4 comments",
+   "found_date": "2026-11-15",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
    "name": "3 & Done",
    "url": "https://3anddoneapp.com",
    "domain": "3anddoneapp.com",
@@ -443,13 +663,14 @@
  ],
  "history": {
   "2026-11-13": 20,
-  "2026-11-14": 20
+  "2026-11-14": 20,
+  "2026-11-15": 20
  },
  "sources": [
-  "src_hn_keywords: 745 items",
-  "src_hn_show: 392 items",
-  "src_lobsters: 96 items",
-  "candidates after filtering: 349"
+  "src_hn_keywords: 664 items",
+  "src_hn_show: 394 items",
+  "src_lobsters: 100 items",
+  "candidates after filtering: 320"
  ],
- "updated": "2026-11-14T04:52:22.326508Z"
+ "updated": "2026-11-15T04:54:39.487765Z"
 }
