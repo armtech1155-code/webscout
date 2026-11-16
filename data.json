@@ -1,6 +1,50 @@
 {
  "sites": [
   {
+   "name": "Home CCI",
+   "url": "https://corporatecomplianceinsights.com",
+   "domain": "corporatecomplianceinsights.com",
+   "category": "Music & Audio",
+   "source": "Hacker News search",
+   "signal": "3 points, 0 comments",
+   "found_date": "2026-11-16",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
+   "name": "Literary Hub",
+   "url": "https://lithub.com",
+   "domain": "lithub.com",
+   "category": "Productivity",
+   "source": "Hacker News search",
+   "signal": "3 points, 0 comments",
+   "found_date": "2026-11-16",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
+   "name": "A2oliteai",
+   "url": "https://a2oliteai.com",
+   "domain": "a2oliteai.com",
+   "category": "Photo & Video",
+   "source": "Hacker News search",
+   "signal": "3 points, 2 comments",
+   "found_date": "2026-11-16",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
+   "name": "Zombie AI Video Generator",
+   "url": "https://zombieaivideo.org",
+   "domain": "zombieaivideo.org",
+   "category": "Photo & Video",
+   "source": "Hacker News search",
+   "signal": "3 points, 0 comments",
+   "found_date": "2026-11-16",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
    "name": "Soren Blank",
    "url": "https://sorenblank.com",
    "domain": "sorenblank.com",
@@ -786,13 +830,13 @@
   "2026-11-13": 20,
   "2026-11-14": 20,
   "2026-11-15": 20,
-  "2026-11-16": 11
+  "2026-11-16": 15
  },
  "sources": [
-  "src_hn_keywords: 680 items",
+  "src_hn_keywords: 697 items",
   "src_hn_show: 394 items",
   "src_lobsters: 100 items",
-  "candidates after filtering: 298"
+  "candidates after filtering: 291"
  ],
- "updated": "2026-11-16T05:32:43.104469Z"
+ "updated": "2026-11-16T07:01:54.303114Z"
 }
