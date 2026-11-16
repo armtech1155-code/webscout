@@ -1,6 +1,127 @@
 {
  "sites": [
   {
+   "name": "Soren Blank",
+   "url": "https://sorenblank.com",
+   "domain": "sorenblank.com",
+   "category": "Design & 3D",
+   "source": "Hacker News search",
+   "signal": "192 points, 44 comments",
+   "found_date": "2026-11-16",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
+   "name": "Pixel Egg",
+   "url": "https://pixelegg.me",
+   "domain": "pixelegg.me",
+   "category": "Music & Audio",
+   "source": "Hacker News (Show HN)",
+   "signal": "26 points, 10 comments",
+   "found_date": "2026-11-16",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
+   "name": "Shotoku",
+   "url": "https://shotoku.dev",
+   "domain": "shotoku.dev",
+   "category": "Finance",
+   "source": "Hacker News (Show HN)",
+   "signal": "11 points, 1 comments",
+   "found_date": "2026-11-16",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
+   "name": "Wiyomi",
+   "url": "https://wiyomi.com",
+   "domain": "wiyomi.com",
+   "category": "Photo & Video",
+   "source": "Hacker News search",
+   "signal": "4 points, 0 comments",
+   "found_date": "2026-11-16",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
+   "name": "Aggregatefi",
+   "url": "https://aggregatefi.com",
+   "domain": "aggregatefi.com",
+   "category": "Finance",
+   "source": "Hacker News search",
+   "signal": "5 points, 6 comments",
+   "found_date": "2026-11-16",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
+   "name": "Shouldigradeit",
+   "url": "https://shouldigradeit.app",
+   "domain": "shouldigradeit.app",
+   "category": "Photo & Video",
+   "source": "Hacker News search",
+   "signal": "3 points, 3 comments",
+   "found_date": "2026-11-16",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
+   "name": "AxiomStory",
+   "url": "https://axiomstory.com",
+   "domain": "axiomstory.com",
+   "category": "Music & Audio",
+   "source": "Hacker News search",
+   "signal": "3 points, 2 comments",
+   "found_date": "2026-11-16",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
+   "name": "VoiceGremlin",
+   "url": "https://voicegremlin.com",
+   "domain": "voicegremlin.com",
+   "category": "Music & Audio",
+   "source": "Hacker News search",
+   "signal": "3 points, 1 comments",
+   "found_date": "2026-11-16",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
+   "name": "Talkhawk",
+   "url": "https://talkhawk.app",
+   "domain": "talkhawk.app",
+   "category": "Music & Audio",
+   "source": "Hacker News search",
+   "signal": "3 points, 1 comments",
+   "found_date": "2026-11-16",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
+   "name": "Fish Audio",
+   "url": "https://fish-audio.org",
+   "domain": "fish-audio.org",
+   "category": "Music & Audio",
+   "source": "Hacker News search",
+   "signal": "3 points, 1 comments",
+   "found_date": "2026-11-16",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
+   "name": "filmcraft",
+   "url": "https://filmcraft.tools",
+   "domain": "filmcraft.tools",
+   "category": "Music & Audio",
+   "source": "Hacker News search",
+   "signal": "3 points, 0 comments",
+   "found_date": "2026-11-16",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
    "name": "literallyeveryfont",
    "url": "https://literallyeveryfont.com",
    "domain": "literallyeveryfont.com",
@@ -664,13 +785,14 @@
  "history": {
   "2026-11-13": 20,
   "2026-11-14": 20,
-  "2026-11-15": 20
+  "2026-11-15": 20,
+  "2026-11-16": 11
  },
  "sources": [
-  "src_hn_keywords: 664 items",
+  "src_hn_keywords: 680 items",
   "src_hn_show: 394 items",
   "src_lobsters: 100 items",
-  "candidates after filtering: 320"
+  "candidates after filtering: 298"
  ],
- "updated": "2026-11-15T04:54:39.487765Z"
+ "updated": "2026-11-16T05:32:43.104469Z"
 }
