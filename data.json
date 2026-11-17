@@ -1,6 +1,28 @@
 {
  "sites": [
   {
+   "name": "Monir Bounadi",
+   "url": "https://monirbounadi.com",
+   "domain": "monirbounadi.com",
+   "category": "Food & Drink",
+   "source": "Hacker News search",
+   "signal": "179 points, 101 comments",
+   "found_date": "2026-11-17",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
+   "name": "Sinaps Studio",
+   "url": "https://sinapsdata.com.br",
+   "domain": "sinapsdata.com.br",
+   "category": "Education",
+   "source": "Hacker News (Show HN)",
+   "signal": "12 points, 6 comments",
+   "found_date": "2026-11-17",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
    "name": "Home CCI",
    "url": "https://corporatecomplianceinsights.com",
    "domain": "corporatecomplianceinsights.com",
@@ -830,13 +852,14 @@
   "2026-11-13": 20,
   "2026-11-14": 20,
   "2026-11-15": 20,
-  "2026-11-16": 15
+  "2026-11-16": 15,
+  "2026-11-17": 2
  },
  "sources": [
-  "src_hn_keywords: 697 items",
+  "src_hn_keywords: 694 items",
   "src_hn_show: 394 items",
-  "src_lobsters: 100 items",
-  "candidates after filtering: 291"
+  "src_lobsters: 94 items",
+  "candidates after filtering: 287"
  ],
- "updated": "2026-11-16T07:01:54.303114Z"
+ "updated": "2026-11-17T04:58:14.593992Z"
 }
