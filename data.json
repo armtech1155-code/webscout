@@ -1,6 +1,17 @@
 {
  "sites": [
   {
+   "name": "Director's Lookbook",
+   "url": "https://directorslookbook.app",
+   "domain": "directorslookbook.app",
+   "category": "Music & Audio",
+   "source": "Hacker News search",
+   "signal": "3 points, 0 comments",
+   "found_date": "2026-11-18",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
    "name": "Monir Bounadi",
    "url": "https://monirbounadi.com",
    "domain": "monirbounadi.com",
@@ -853,13 +864,14 @@
   "2026-11-14": 20,
   "2026-11-15": 20,
   "2026-11-16": 15,
-  "2026-11-17": 2
+  "2026-11-17": 2,
+  "2026-11-18": 1
  },
  "sources": [
-  "src_hn_keywords: 694 items",
-  "src_hn_show: 394 items",
-  "src_lobsters: 94 items",
-  "candidates after filtering: 287"
+  "src_hn_keywords: 674 items",
+  "src_hn_show: 395 items",
+  "src_lobsters: 100 items",
+  "candidates after filtering: 283"
  ],
- "updated": "2026-11-17T04:58:14.593992Z"
+ "updated": "2026-11-18T04:59:00.446630Z"
 }
