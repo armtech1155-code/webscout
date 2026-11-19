@@ -1,6 +1,28 @@
 {
  "sites": [
   {
+   "name": "Raj Shekhar",
+   "url": "https://rshekhar.com",
+   "domain": "rshekhar.com",
+   "category": "Photo & Video",
+   "source": "Hacker News (Show HN)",
+   "signal": "173 points, 45 comments",
+   "found_date": "2026-11-19",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
+   "name": "PHP",
+   "url": "https://php.net",
+   "domain": "php.net",
+   "category": "Education",
+   "source": "Lobsters",
+   "signal": "21 points",
+   "found_date": "2026-11-19",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
    "name": "Director's Lookbook",
    "url": "https://directorslookbook.app",
    "domain": "directorslookbook.app",
@@ -865,13 +887,14 @@
   "2026-11-15": 20,
   "2026-11-16": 15,
   "2026-11-17": 2,
-  "2026-11-18": 1
+  "2026-11-18": 1,
+  "2026-11-19": 2
  },
  "sources": [
-  "src_hn_keywords: 674 items",
+  "src_hn_keywords: 697 items",
   "src_hn_show: 395 items",
-  "src_lobsters: 100 items",
-  "candidates after filtering: 283"
+  "src_lobsters: 98 items",
+  "candidates after filtering: 292"
  ],
- "updated": "2026-11-18T04:59:00.446630Z"
+ "updated": "2026-11-19T05:02:09.441643Z"
 }
