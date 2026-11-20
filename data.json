@@ -1,6 +1,50 @@
 {
  "sites": [
   {
+   "name": "The Data Exchange",
+   "url": "https://thedataexchange.media",
+   "domain": "thedataexchange.media",
+   "category": "Music & Audio",
+   "source": "Hacker News search",
+   "signal": "221 points, 204 comments",
+   "found_date": "2026-11-20",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
+   "name": "Cornhole News",
+   "url": "https://cornholenews.news",
+   "domain": "cornholenews.news",
+   "category": "Social & Chat",
+   "source": "Hacker News (Show HN)",
+   "signal": "201 points, 95 comments",
+   "found_date": "2026-11-20",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
+   "name": "Relic AI",
+   "url": "https://relic-app.com",
+   "domain": "relic-app.com",
+   "category": "Photo & Video",
+   "source": "Hacker News search",
+   "signal": "4 points, 2 comments",
+   "found_date": "2026-11-20",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
+   "name": "NeuralRad",
+   "url": "https://neuralrad.com",
+   "domain": "neuralrad.com",
+   "category": "Health & Fitness",
+   "source": "Hacker News search",
+   "signal": "3 points, 2 comments",
+   "found_date": "2026-11-20",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
    "name": "Raj Shekhar",
    "url": "https://rshekhar.com",
    "domain": "rshekhar.com",
@@ -888,13 +932,14 @@
   "2026-11-16": 15,
   "2026-11-17": 2,
   "2026-11-18": 1,
-  "2026-11-19": 2
+  "2026-11-19": 2,
+  "2026-11-20": 4
  },
  "sources": [
-  "src_hn_keywords: 697 items",
+  "src_hn_keywords: 722 items",
   "src_hn_show: 395 items",
-  "src_lobsters: 98 items",
-  "candidates after filtering: 292"
+  "src_lobsters: 96 items",
+  "candidates after filtering: 294"
  ],
- "updated": "2026-11-19T05:02:09.441643Z"
+ "updated": "2026-11-20T04:58:53.633661Z"
 }
