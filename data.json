@@ -1,6 +1,72 @@
 {
  "sites": [
   {
+   "name": "Notched",
+   "url": "https://trynotched.com",
+   "domain": "trynotched.com",
+   "category": "Music & Audio",
+   "source": "Hacker News (Show HN)",
+   "signal": "143 points, 107 comments",
+   "found_date": "2026-11-21",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
+   "name": "hippomaps",
+   "url": "https://hippomaps.ch",
+   "domain": "hippomaps.ch",
+   "category": "Photo & Video",
+   "source": "Hacker News search",
+   "signal": "126 points, 32 comments",
+   "found_date": "2026-11-21",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
+   "name": "David Schmid",
+   "url": "https://dawei7.com",
+   "domain": "dawei7.com",
+   "category": "Education",
+   "source": "Hacker News (Show HN)",
+   "signal": "14 points, 0 comments",
+   "found_date": "2026-11-21",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
+   "name": "Cherwell Valley Motor Club",
+   "url": "https://cherwellvalleymotorclub.app",
+   "domain": "cherwellvalleymotorclub.app",
+   "category": "Design & 3D",
+   "source": "Hacker News search",
+   "signal": "11 points, 13 comments",
+   "found_date": "2026-11-21",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
+   "name": "Michael Kutowski",
+   "url": "https://mktwsk.xyz",
+   "domain": "mktwsk.xyz",
+   "category": "Productivity",
+   "source": "Hacker News search",
+   "signal": "3 points, 0 comments",
+   "found_date": "2026-11-21",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
+   "name": "Split the Restaurant Bill App",
+   "url": "https://taveo.app",
+   "domain": "taveo.app",
+   "category": "Food & Drink",
+   "source": "Hacker News search",
+   "signal": "3 points, 2 comments",
+   "found_date": "2026-11-21",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
    "name": "The Data Exchange",
    "url": "https://thedataexchange.media",
    "domain": "thedataexchange.media",
@@ -933,13 +999,14 @@
   "2026-11-17": 2,
   "2026-11-18": 1,
   "2026-11-19": 2,
-  "2026-11-20": 4
+  "2026-11-20": 4,
+  "2026-11-21": 6
  },
  "sources": [
-  "src_hn_keywords: 722 items",
+  "src_hn_keywords: 675 items",
   "src_hn_show: 395 items",
   "src_lobsters: 96 items",
-  "candidates after filtering: 294"
+  "candidates after filtering: 284"
  ],
- "updated": "2026-11-20T04:58:53.633661Z"
+ "updated": "2026-11-21T04:55:19.907719Z"
 }
