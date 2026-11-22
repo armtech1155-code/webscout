@@ -1,6 +1,17 @@
 {
  "sites": [
   {
+   "name": "Muglobe",
+   "url": "https://muglobe.com",
+   "domain": "muglobe.com",
+   "category": "Music & Audio",
+   "source": "Hacker News search",
+   "signal": "3 points, 4 comments",
+   "found_date": "2026-11-22",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
    "name": "Notched",
    "url": "https://trynotched.com",
    "domain": "trynotched.com",
@@ -1000,13 +1011,14 @@
   "2026-11-18": 1,
   "2026-11-19": 2,
   "2026-11-20": 4,
-  "2026-11-21": 6
+  "2026-11-21": 6,
+  "2026-11-22": 1
  },
  "sources": [
-  "src_hn_keywords: 675 items",
-  "src_hn_show: 395 items",
-  "src_lobsters: 96 items",
-  "candidates after filtering: 284"
+  "src_hn_keywords: 685 items",
+  "src_hn_show: 394 items",
+  "src_lobsters: 100 items",
+  "candidates after filtering: 282"
  ],
- "updated": "2026-11-21T04:55:19.907719Z"
+ "updated": "2026-11-22T04:57:47.035264Z"
 }
