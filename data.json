@@ -1,6 +1,28 @@
 {
  "sites": [
   {
+   "name": "Snowden Archive",
+   "url": "https://snowchive.org",
+   "domain": "snowchive.org",
+   "category": "Productivity",
+   "source": "Hacker News (Show HN)",
+   "signal": "11 points, 4 comments",
+   "found_date": "2026-11-23",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
+   "name": "Kioku · Remember what you read",
+   "url": "https://kiokuweb.com",
+   "domain": "kiokuweb.com",
+   "category": "Health & Fitness",
+   "source": "Hacker News search",
+   "signal": "3 points, 0 comments",
+   "found_date": "2026-11-23",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
    "name": "Muglobe",
    "url": "https://muglobe.com",
    "domain": "muglobe.com",
@@ -1012,13 +1034,14 @@
   "2026-11-19": 2,
   "2026-11-20": 4,
   "2026-11-21": 6,
-  "2026-11-22": 1
+  "2026-11-22": 1,
+  "2026-11-23": 2
  },
  "sources": [
-  "src_hn_keywords: 685 items",
-  "src_hn_show: 394 items",
+  "src_hn_keywords: 705 items",
+  "src_hn_show: 393 items",
   "src_lobsters: 100 items",
-  "candidates after filtering: 282"
+  "candidates after filtering: 280"
  ],
- "updated": "2026-11-22T04:57:47.035264Z"
+ "updated": "2026-11-23T05:15:49.730625Z"
 }
