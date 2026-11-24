@@ -1,6 +1,39 @@
 {
  "sites": [
   {
+   "name": "Veit Heller",
+   "url": "https://veitheller.de",
+   "domain": "veitheller.de",
+   "category": "Finance",
+   "source": "Lobsters",
+   "signal": "12 points",
+   "found_date": "2026-11-24",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
+   "name": "ScienceAlert",
+   "url": "https://sciencealert.com",
+   "domain": "sciencealert.com",
+   "category": "Health & Fitness",
+   "source": "Hacker News search",
+   "signal": "4 points, 0 comments",
+   "found_date": "2026-11-24",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
+   "name": "P.T.C.",
+   "url": "https://peateasea.de",
+   "domain": "peateasea.de",
+   "category": "Education",
+   "source": "Hacker News search",
+   "signal": "3 points, 0 comments",
+   "found_date": "2026-11-24",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
    "name": "Snowden Archive",
    "url": "https://snowchive.org",
    "domain": "snowchive.org",
@@ -1035,13 +1068,14 @@
   "2026-11-20": 4,
   "2026-11-21": 6,
   "2026-11-22": 1,
-  "2026-11-23": 2
+  "2026-11-23": 2,
+  "2026-11-24": 3
  },
  "sources": [
-  "src_hn_keywords: 705 items",
+  "src_hn_keywords: 688 items",
   "src_hn_show: 393 items",
-  "src_lobsters: 100 items",
-  "candidates after filtering: 280"
+  "src_lobsters: 96 items",
+  "candidates after filtering: 276"
  ],
- "updated": "2026-11-23T05:15:49.730625Z"
+ "updated": "2026-11-24T05:05:25.863946Z"
 }
