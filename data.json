@@ -1,6 +1,39 @@
 {
  "sites": [
   {
+   "name": "Ant",
+   "url": "https://ant-lang.org",
+   "domain": "ant-lang.org",
+   "category": "Education",
+   "source": "Hacker News (Show HN)",
+   "signal": "15 points, 5 comments",
+   "found_date": "2026-11-25",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
+   "name": "Interstate Weather",
+   "url": "https://interstateweather.com",
+   "domain": "interstateweather.com",
+   "category": "Utilities",
+   "source": "Hacker News search",
+   "signal": "8 points, 1 comments",
+   "found_date": "2026-11-25",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
+   "name": "Isometric Burlington",
+   "url": "https://isoburlington.com",
+   "domain": "isoburlington.com",
+   "category": "Photo & Video",
+   "source": "Hacker News search",
+   "signal": "3 points, 0 comments",
+   "found_date": "2026-11-25",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
    "name": "Veit Heller",
    "url": "https://veitheller.de",
    "domain": "veitheller.de",
@@ -1069,13 +1102,14 @@
   "2026-11-21": 6,
   "2026-11-22": 1,
   "2026-11-23": 2,
-  "2026-11-24": 3
+  "2026-11-24": 3,
+  "2026-11-25": 3
  },
  "sources": [
-  "src_hn_keywords: 688 items",
+  "src_hn_keywords: 661 items",
   "src_hn_show: 393 items",
-  "src_lobsters: 96 items",
-  "candidates after filtering: 276"
+  "src_lobsters: 98 items",
+  "candidates after filtering: 269"
  ],
- "updated": "2026-11-24T05:05:25.863946Z"
+ "updated": "2026-11-25T05:06:40.360657Z"
 }
