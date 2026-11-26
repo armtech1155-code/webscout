@@ -1,6 +1,50 @@
 {
  "sites": [
   {
+   "name": "Joonoo",
+   "url": "https://joonoo.art",
+   "domain": "joonoo.art",
+   "category": "Photo & Video",
+   "source": "Hacker News search",
+   "signal": "20 points, 22 comments",
+   "found_date": "2026-11-26",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
+   "name": "Zulip",
+   "url": "https://zulipchat.com",
+   "domain": "zulipchat.com",
+   "category": "Social & Chat",
+   "source": "Lobsters",
+   "signal": "9 points",
+   "found_date": "2026-11-26",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
+   "name": "Olumino",
+   "url": "https://olumino.app",
+   "domain": "olumino.app",
+   "category": "Education",
+   "source": "Hacker News search",
+   "signal": "5 points, 5 comments",
+   "found_date": "2026-11-26",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
+   "name": "AI Dating Assistant",
+   "url": "https://yourdatingassistant.com",
+   "domain": "yourdatingassistant.com",
+   "category": "Social & Chat",
+   "source": "Hacker News search",
+   "signal": "3 points, 6 comments",
+   "found_date": "2026-11-26",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
    "name": "Ant",
    "url": "https://ant-lang.org",
    "domain": "ant-lang.org",
@@ -1103,13 +1147,14 @@
   "2026-11-22": 1,
   "2026-11-23": 2,
   "2026-11-24": 3,
-  "2026-11-25": 3
+  "2026-11-25": 3,
+  "2026-11-26": 4
  },
  "sources": [
-  "src_hn_keywords: 661 items",
-  "src_hn_show: 393 items",
-  "src_lobsters: 98 items",
-  "candidates after filtering: 269"
+  "src_hn_keywords: 673 items",
+  "src_hn_show: 394 items",
+  "src_lobsters: 100 items",
+  "candidates after filtering: 263"
  ],
- "updated": "2026-11-25T05:06:40.360657Z"
+ "updated": "2026-11-26T05:06:20.667557Z"
 }
