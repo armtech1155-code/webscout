@@ -1,6 +1,28 @@
 {
  "sites": [
   {
+   "name": "GloriART",
+   "url": "https://gloriart.net",
+   "domain": "gloriart.net",
+   "category": "Music & Audio",
+   "source": "Hacker News search",
+   "signal": "3 points, 0 comments",
+   "found_date": "2026-11-27",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
+   "name": "Left to Solve",
+   "url": "https://lefttosolve.com",
+   "domain": "lefttosolve.com",
+   "category": "Education",
+   "source": "Hacker News search",
+   "signal": "3 points, 0 comments",
+   "found_date": "2026-11-27",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
    "name": "Joonoo",
    "url": "https://joonoo.art",
    "domain": "joonoo.art",
@@ -1148,13 +1170,14 @@
   "2026-11-23": 2,
   "2026-11-24": 3,
   "2026-11-25": 3,
-  "2026-11-26": 4
+  "2026-11-26": 4,
+  "2026-11-27": 2
  },
  "sources": [
-  "src_hn_keywords: 673 items",
-  "src_hn_show: 394 items",
-  "src_lobsters: 100 items",
-  "candidates after filtering: 263"
+  "src_hn_keywords: 733 items",
+  "src_hn_show: 395 items",
+  "src_lobsters: 96 items",
+  "candidates after filtering: 277"
  ],
- "updated": "2026-11-26T05:06:20.667557Z"
+ "updated": "2026-11-27T05:04:51.598363Z"
 }
