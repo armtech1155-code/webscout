@@ -1,6 +1,50 @@
 {
  "sites": [
   {
+   "name": "Construct22",
+   "url": "https://construct22.com",
+   "domain": "construct22.com",
+   "category": "Social & Chat",
+   "source": "Hacker News search",
+   "signal": "692 points, 286 comments",
+   "found_date": "2026-11-28",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
+   "name": "DragDropMath",
+   "url": "https://dragdropmath.com",
+   "domain": "dragdropmath.com",
+   "category": "Education",
+   "source": "Hacker News search",
+   "signal": "117 points, 33 comments",
+   "found_date": "2026-11-28",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
+   "name": "roddie.digital",
+   "url": "https://roddie.digital",
+   "domain": "roddie.digital",
+   "category": "Photo & Video",
+   "source": "Lobsters",
+   "signal": "36 points",
+   "found_date": "2026-11-28",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
+   "name": "Sqrin",
+   "url": "https://sqrin.app",
+   "domain": "sqrin.app",
+   "category": "Photo & Video",
+   "source": "Hacker News (Show HN)",
+   "signal": "13 points, 6 comments",
+   "found_date": "2026-11-28",
+   "ios_status": "No official iOS app found - needs verification",
+   "android_status": "No Play Store link found on website - needs verification"
+  },
+  {
    "name": "GloriART",
    "url": "https://gloriart.net",
    "domain": "gloriart.net",
@@ -1171,13 +1215,14 @@
   "2026-11-24": 3,
   "2026-11-25": 3,
   "2026-11-26": 4,
-  "2026-11-27": 2
+  "2026-11-27": 2,
+  "2026-11-28": 4
  },
  "sources": [
-  "src_hn_keywords: 733 items",
-  "src_hn_show: 395 items",
+  "src_hn_keywords: 670 items",
+  "src_hn_show: 393 items",
   "src_lobsters: 96 items",
-  "candidates after filtering: 277"
+  "candidates after filtering: 275"
  ],
- "updated": "2026-11-27T05:04:51.598363Z"
+ "updated": "2026-11-28T04:59:04.001760Z"
 }
